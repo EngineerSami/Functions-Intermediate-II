@@ -33,8 +33,8 @@ class SList:
 
 if __name__ == "__main__":
     my_list = SList()
-    my_list.add_to_front(10)
-    my_list.add_to_front(20)
     my_list.add_to_back(30)
     my_list.add_to_back(40)
+    my_list.add_to_front(10)
+    my_list.add_to_front(20)
     my_list.print_values()

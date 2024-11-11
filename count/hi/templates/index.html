@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visit Counter</title>
+</head>
+<body>
+    <h1>You have visited this page {{ request.session.visit_count }} times.</h1>
+    <a href="/destroy_session">Clear Session</a>
+</body>
+</html>

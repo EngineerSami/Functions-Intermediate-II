@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number</title>
+
+</head>
+<body>
+    <h1>Guess the Number!</h1>
+    <p>hellow {{ message }} </p>
+    
+    <form method="POST" action="/play_again">
+        {% csrf_token %}
+        <label for="guess">Enter your guess (1-100):</label>
+        <input type="number" id="guess" name="guess" min="1" max="100" required>
+        <button type="submit">Guess</button>
+    </form>
+
+    {% if play_again %}
+        <a href="/play_again">Play Again?</a>
+    {% endif %}
+</body>
+</html>

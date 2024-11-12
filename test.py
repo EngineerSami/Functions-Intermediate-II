@@ -1,24 +1,7 @@
-class Country:
-    def __init__(self, name):
-        self.name = name
-
-class India(Country):
-    def __init__(self):
-        super().__init__("India")
-    
-    def print_continent(self):
-        print("Asia")
-
-class France(Country):
-    def __init__(self):
-        super().__init__("France")
-    
-    def print_continent(self):
-        print("Europe")
-
-
-obj1 = India()
-obj1.print_continent()
-
-obj2 = France()
-obj2.print_continent()
+def fact(n):
+    if n == 0 :
+        return 0
+    return n + fact(n - 1)
+i=int(input('Enter the num:'))
+s=fact(i)
+print("Factorial of "+str(i) + " :" , str(s))

@@ -11,7 +11,8 @@ sports_directory = {
     'soccer': ['Messi', 'Ronaldo', 'Rooney']
 }
 z = [{'x': 10, 'y': 20}]
-
+sports_directory['soccer'][1]='Sami'
+students[2]['last_name']='Daraghmeh'
 x[1][0] = 15
 students[0]['last_name'] = 'Bryant'
 sports_directory['soccer'][0] = 'Andres'

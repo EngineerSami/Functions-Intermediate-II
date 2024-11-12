@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+/* Headers */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Form Styling */
+.form label {
+    display: block;
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #45A049;
+}
+
+/* Table Styling */
+.show-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.show-table th, .show-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.show-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.show-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.show-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Action Links */
+.action-link, .back-link, .add-new {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.action-link:hover, .back-link:hover, .add-new:hover {
+    color: #2E7D32;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-button:hover {
+    background-color: #E53935;
+}
+.hi{
+    width: 90%;
+    height: 50%;
+    box-shadow: rgba(0, 245, 37, 0.56) 0px 22px 20px 14px;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-new{
+    margin-top: 50px;
+}

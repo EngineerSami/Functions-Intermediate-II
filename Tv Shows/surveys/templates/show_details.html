@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Show Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <h1>{{ show.title }}</h1>
-    <p><strong>Network:</strong> {{ show.network }}</p>
-    <p><strong>Release Date:</strong> {{ show.release_date }}</p>
-    <p><strong>Description:</strong> {{ show.description }}</p>
-    <p><strong>Last Updated:</strong> {{ show.last_updated }}</p>
-
-    <a href="{% url 'edit_show' show.id %}">Edit</a> |
-    <form action="{% url 'delete_show' show.id %}" method="post" style="display:inline;">
+    <div class="details">
+        <p><strong>Network:</strong> {{ show.network }}</p>
+        <p><strong>Release Date:</strong> {{ show.release_date }}</p>
+        <p><strong>Description:</strong> {{ show.description }}</p>
+        <p><strong>Last Updated:</strong> {{ show.last_updated }}</p>
+    </div>
+    <a href="{% url 'edit_show' show.id %}" class="action-link">Edit</a> |
+    <form action="{% url 'delete_show' show.id %}" method="post" class="inline-form">
         {% csrf_token %}
-        <button type="submit">Delete</button>
+        <button type="submit" class="delete-button">Delete</button>
     </form>
     <br><br>
-    <a href="{% url 'all_shows' %}">Go Back</a>
+    <a href="{% url 'all_shows' %}" class="back-link">Go Back</a>
 </body>
 </html>

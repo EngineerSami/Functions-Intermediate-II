@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>All Shows</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <h1>All Shows</h1>
-    <table border="3">
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Network</th>
-            <th>Release Date</th>
-            <th>Actions</th>
-        </tr>
-        {% for show in shows %}
-        <tr>
-            <td>{{ show.id }}</td>
-            <td>{{ show.title }}</td>
-            <td>{{ show.network }}</td>
-            <td>{{ show.release_date }}</td>
-            <td>
-                <a href="{% url 'show_details' show.id %}">Show</a> |
-                <a href="{% url 'edit_show' show.id %}">Edit</a> |
-                <form action="{% url 'delete_show' show.id %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <button type="submit">Delete</button>
-                </form>
-            </td>
-        </tr>
-        {% endfor %}
+    <div class="hi">
+    <table class="show-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Network</th>
+                <th>Release Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for show in shows %}
+            <tr>
+                <td>{{ show.id }}</td>
+                <td>{{ show.title }}</td>
+                <td>{{ show.network }}</td>
+                <td>{{ show.release_date }}</td>
+                <td>
+                    <a href="{% url 'show_details' show.id %}" class="action-link">Show</a> |
+                    <a href="{% url 'edit_show' show.id %}" class="action-link">Edit</a> |
+                    <form action="{% url 'delete_show' show.id %}" method="post" class="inline-form">
+                        {% csrf_token %}
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
-    <a href="{% url 'new_show' %}">Add a New Show</a>
+</div>
+    <a href="{% url 'new_show' %}" class="add-new">Add a New Show</a>
 </body>
 </html>

@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Show</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <h1>Edit Show: {{ show.title }}</h1>
-    <form action="{% url 'update_show' show.id %}" method="post">
+    <form action="{% url 'update_show' show.id %}" method="post" class="form">
         {% csrf_token %}
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title" value="{{ show.title }}" required><br>
+        <input type="text" id="title" name="title" value="{{ show.title }}" required>
 
         <label for="network">Network:</label>
-        <input type="text" id="network" name="network" value="{{ show.network }}" required><br>
+        <input type="text" id="network" name="network" value="{{ show.network }}" required>
 
         <label for="release_date">Release Date:</label>
-        <input type="date" id="release_date" name="release_date" value="{{ show.release_date }}" required><br>
+        <input type="date" id="release_date" name="release_date" value="{{ show.release_date }}" required>
 
         <label for="description">Description:</label>
-        <textarea id="description" name="description">{{ show.description }}</textarea><br>
+        <textarea id="description" name="description">{{ show.description }}</textarea>
 
-        <button type="submit">Update</button>
+        <button type="submit" class="submit-button">Update</button>
     </form>
-    <a href="{% url 'show_details' show.id %}">Go to Show</a>
+    <a href="{% url 'show_details' show.id %}" class="back-link">Go to Show</a>
     <br><br>
-    <a href="{% url 'all_shows' %}">Go Back</a>
+    <a href="{% url 'all_shows' %}" class="back-link">Go Back</a>
 </body>
 </html>

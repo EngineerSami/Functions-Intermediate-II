@@ -108,7 +108,7 @@ h1 {
 .hi{
     width: 90%;
     height: 50%;
-    box-shadow: rgba(0, 245, 37, 0.56) 0px 22px 20px 14px;
+    box-shadow: rgba(54, 54, 54, 0.56) 0px 22px 20px 14px;
     background-color: #f4f4f9;
     color: #333;
     padding: 20px;

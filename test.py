@@ -1,7 +1,19 @@
-count=0
-for i in range (10000000,99999999):
-    count+=1
-    if i==13062022:
-        print(count)
+def myPow(self, x: float, n: int) -> float:
+    if n == 0:
+        return 1.0
+    elif n < 0:
+        x = 1 / x
+        n = -n
+        if n % 2 == 0: 
+            half = self.myPow(x, n // 2)
+            return half * half
+        else:
+            return x*self.myPow(x,n-1)
         
-        
+
+
+
+x=2
+n=2
+result = myPow(x,n) 
+print(result)

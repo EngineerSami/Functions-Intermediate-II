@@ -1,0 +1,16 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amadon Checkout</title>
+</head>
+<body>
+    <h1>Thank you for your business!</h1>
+    <p>We charged your credit card for ${{ recent_order_total }}.</p>
+    <p>You have ordered {{ recent_order_quantity }} items in this purchase.</p>
+    <p>Total items ordered so far: {{ total_items }}</p>
+    <p>Total amount spent: ${{ total_spent }}</p>
+    <a href="{% url 'index' %}">Go back</a>
+</body>
+</html>
